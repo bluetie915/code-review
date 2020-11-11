@@ -19,7 +19,7 @@ public class GamePanel extends JPanel implements KeyListener, ActionListener {
     int[] snakeY = new int[500];  //蛇的坐标y
     String fx = "R"; //蛇的方向 ： R:右  L:左  U:上  D:下
     boolean isStart = false; //游戏是否开始
-    Timer timer = new Timer(10, this); //定时器：第一个参数，就是定时执行时间
+    Timer timer = new Timer(100, this); //定时器：第一个参数，就是定时执行时间
     //食物
     int foodx;
     int foody;
