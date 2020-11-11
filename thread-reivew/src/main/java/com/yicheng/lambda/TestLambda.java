@@ -45,7 +45,6 @@ public class TestLambda {
         inter = () -> System.out.println("I like lamada5，这是使用lambda表达式");
         ;
         inter.getString();
-
     }
 }
 
