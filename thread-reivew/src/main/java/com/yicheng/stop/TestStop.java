@@ -26,9 +26,9 @@ public class TestStop implements Runnable {
         TestStop testStop = new TestStop();
         new Thread(testStop).start();
 
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 4000; i++) {
             System.out.println("main---" + i);
-            if (i == 900) {
+            if (i == 3900) {
                 testStop.stop();
                 System.out.println("线程该停止了");
             }

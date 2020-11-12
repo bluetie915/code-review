@@ -12,10 +12,12 @@ public class Race implements Runnable {
 
     @Override
     public void run() {
-        for (int i = 0; i <= 100; i++) {
-            if (Thread.currentThread().getName().equals("兔子") && i == 90) {
+        for (int i = 1; i <= 100; i++) {
+            // 如果是兔子，try语句块的i++表示一次跑两步比乌龟快，但是当兔子快要到终点时，睡觉1秒
+            if (Thread.currentThread().getName().equals("兔子") && i > 90) {
                 try {
-                    Thread.sleep(100);
+                    i++;
+                    Thread.sleep(1000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

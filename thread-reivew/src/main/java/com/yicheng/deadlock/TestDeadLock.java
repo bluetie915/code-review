@@ -1,5 +1,7 @@
 package com.yicheng.deadlock;
 
+import java.util.concurrent.Executors;
+
 /**
  * @author 张艺成
  * @date 2020/11/11 0011 14:24
@@ -48,7 +50,7 @@ class Makeup extends Thread {
                     System.out.println(this.girlName + "想获得镜子的锁");
                 }
             }
-        }else {
+        } else {
             synchronized (mirror) { // 获取镜子的锁
                 System.out.println(this.girlName + "获取镜子的锁");
                 Thread.sleep(1000);
@@ -61,11 +63,7 @@ class Makeup extends Thread {
 }
 
 // 口红
-class Lipstick {
-
-}
+class Lipstick {}
 
 // 镜子
-class Mirror {
-
-}
+class Mirror {}

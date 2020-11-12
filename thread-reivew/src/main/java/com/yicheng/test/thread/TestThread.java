@@ -10,7 +10,7 @@ public class TestThread extends Thread {
     @Override
     public void run() {
         for (int i = 0; i < 300; i++) {
-            System.out.println("我是分支线程，打印" + i);
+            System.out.println("通过继承Thread类，我是分支线程，打印" + i);
         }
     }
 
@@ -18,7 +18,7 @@ public class TestThread extends Thread {
         TestThread testThread = new TestThread();
         testThread.start();
         for (int i = 0; i < 2000; i++) {
-            System.out.println("我是主线程，打印" + i);
+            System.out.println("通过继承Thread类，我是主线程，打印" + i);
         }
     }
 }
