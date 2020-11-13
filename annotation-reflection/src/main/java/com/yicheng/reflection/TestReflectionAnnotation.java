@@ -44,8 +44,7 @@ class Doctor {
     @FidleBlue(columnName = "db_age", type = "int", length = 10)
     private int age;
 
-    public Doctor() {
-    }
+    public Doctor() {}
 
     public Doctor(int id, String name, int age) {
         this.id = id;
