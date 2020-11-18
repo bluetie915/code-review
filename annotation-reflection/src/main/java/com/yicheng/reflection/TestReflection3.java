@@ -31,6 +31,7 @@ public class TestReflection3 {
         System.out.println(c9);
 
         // 只要元素类型与维度一样要，就是同一个Class
+        System.out.println("-----------------------------");
         int[] a = new int[10];
         int[] b = new int[100];
         System.out.println(a.getClass().hashCode());

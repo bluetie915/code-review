@@ -4,7 +4,7 @@ package com.yicheng.reflection;
  * @author 张艺成
  * @date 2020/11/12 0012 19:16
  */
-// 测试Class类的创建方式有哪些
+// Class 类的创建方式有哪些
 public class TestReflection02 {
     public static void main(String[] args) throws ClassNotFoundException {
         Person person = new Student();
@@ -12,23 +12,23 @@ public class TestReflection02 {
 
         // 方式一：通过对象获得
         Class c1 = person.getClass();
-        System.out.println(c1.hashCode());
+        System.out.println("通过 person.getClass() 方式获得 Class 对象：" + c1.hashCode());
 
         // 方式二：forName获得
         Class c2 = Class.forName("com.yicheng.reflection.Student");
-        System.out.println(c2.hashCode());
+        System.out.println("通过 Class.forName() 方式获得 Class 对象：" + c2.hashCode());
 
         // 方式三：通过 类名.class 获得
         Class c3 = Student.class;
-        System.out.println(c3.hashCode());
+        System.out.println("通过 Student.class 方式获得 Class 对象：" + c3.hashCode());
 
         // 方式四：基本内置类型的包装类都有一个Type属性
         Class c4 = Integer.TYPE;
-        System.out.println(c4);
+        System.out.println("基本内置类型通过 Integer.TYPE 方式获得 Class 对象：" + c4);
 
         // 获得父类类型
         Class c5 = c1.getSuperclass();
-        System.out.println(c5);
+        System.out.println("通过 c1.getSuperclass() 方式获得父类 Class 对象：" + c5);
     }
 }
 

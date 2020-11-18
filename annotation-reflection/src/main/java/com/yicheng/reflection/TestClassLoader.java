@@ -7,6 +7,7 @@ package com.yicheng.reflection;
 public class TestClassLoader {
     public static void main(String[] args) {
         A a = new A();
+        System.out.println(a.m);
     }
 }
 

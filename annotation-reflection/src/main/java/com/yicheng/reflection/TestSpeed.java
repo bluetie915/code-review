@@ -7,6 +7,7 @@ import java.lang.reflect.Method;
  * @author 张艺成
  * @date 2020/11/13 0013 10:50
  */
+// 反射会费时，测试时间
 public class TestSpeed {
 
     public static void main(String[] args) throws NoSuchMethodException, IllegalAccessException, InvocationTargetException {

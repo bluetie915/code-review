@@ -15,24 +15,23 @@ public class TestReflectionAnnotation {
         // 通过反射获得注解
         Annotation[] annotations = c1.getAnnotations();
         for (Annotation annotation : annotations) {
-            System.out.println(annotation);
+            System.out.println("通过 c1.getAnnotations() 方法获得所有的注解：" + annotation);
         }
 
         // 获得注解value的值
         System.out.println("----------------------------");
         TableBlue tableBlue = (TableBlue) c1.getAnnotation(TableBlue.class);
         String value = tableBlue.value();
-        System.out.println(value);
+        System.out.println("通过 c1.getAnnotation() 获取指定注解，再获取属性值：" + value);
 
-        // 获得类指定的注解
+        // 获得类的字段的注解
         System.out.println("----------------------------");
         Field name = c1.getDeclaredField("id");
         FidleBlue fidleBlue = name.getAnnotation(FidleBlue.class);
-        System.out.println(fidleBlue.columnName());
-        System.out.println(fidleBlue.length());
-        System.out.println(fidleBlue.type());
+        System.out.println("通过 name.getAnnotation() 获取指定字段的注解：" + fidleBlue.columnName());
+        System.out.println("通过 name.getAnnotation() 获取指定字段的注解：" + fidleBlue.length());
+        System.out.println("通过 name.getAnnotation() 获取指定字段的注解：" + fidleBlue.type());
     }
-
 }
 
 @TableBlue("db_doctor")
