@@ -23,11 +23,11 @@ public class Student {
     public static List<Student> getStudents() {
         List<Student> list = new ArrayList<>();
         list.add(new Student("张三", 24, "basketball", 88));
-        list.add(new Student("李四", 15, "basketball", 78));
-        list.add(new Student("王五", 30, "basketball", 80));
-        list.add(new Student("赵六", 18, "basketball", 95));
-        list.add(new Student("李刚", 22, "basketball", 68));
-        list.add(new Student("小明", 16, "basketball", 100));
+        list.add(new Student("李四", 15, "baseball", 78));
+        list.add(new Student("王五", 30, "soccer", 80));
+        list.add(new Student("赵六", 18, "soccer", 80));
+        list.add(new Student("李刚", 22, "basketball", 78));
+        list.add(new Student("小明", 25, "run", 100));
         return list;
     }
 }
