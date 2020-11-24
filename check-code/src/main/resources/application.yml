@@ -1,0 +1,9 @@
+server:
+  port: 8989
+spring:
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java
+  freemarker:
+    cache: false
